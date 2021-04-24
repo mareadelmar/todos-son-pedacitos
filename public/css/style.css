@@ -1,0 +1,318 @@
+.contenedor-loader,
+.contenedor-pedacitos {
+    display: none;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Roboto Mono", monospace;
+    color: #333;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url("../images/fondo1.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.contenedor-principal {
+    height: 100vh;
+    width: 100%;
+}
+
+.contenedor-content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio-titulo {
+    font-family: "Roboto Mono", monospace;
+    font-size: 3em;
+    padding: 0.75em;
+}
+
+.p-texto {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.3em;
+    margin-bottom: 2em;
+}
+
+/* .inicio-contenedor-btns {
+} */
+
+.btn {
+    background-color: #db1f48;
+    padding: 1em;
+    border-radius: 0.5em;
+    color: #e5ddc8;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    color: #333;
+}
+
+.btn-mandar-inicio {
+    text-decoration: none;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
+        inset -2px -2px grey, inset 2px 2px #dfdfdf;
+    margin-right: 20px;
+}
+
+.contenedor-loader {
+    height: 98vh;
+    width: 65%;
+}
+
+.loader {
+    height: 98vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 37%;
+}
+
+iframe {
+    border: none;
+}
+
+.contenedor-pedacitos {
+    height: 100vh;
+    width: 100%;
+}
+
+.contenedor-ventana {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventana {
+    max-height: 80%;
+    width: 50%;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
+        inset -2px -2px grey, inset 2px 2px #fff;
+    background: silver;
+    padding: 3px;
+}
+
+.title-bar {
+    font-size: 11px;
+    background: linear-gradient(90deg, #db1f48, #bb5269);
+    padding: 3px 2px 3px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vertical-bar,
+button {
+    background: silver;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-image: none;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
+        inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+.title-bar-text {
+    margin-left: 10px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0;
+    margin-right: 24px;
+}
+
+.title-bar-controls {
+    display: flex;
+}
+
+.title-bar-controls button {
+    padding: 0;
+    display: block;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.title-bar-controls button[aria-label="Minimize"] {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='6' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 0h6v2H0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: bottom 3px left 4px;
+}
+
+.title-bar-controls button[aria-label="Maximize"] {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='9' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 0H0v9h9V0zM8 2H1v6h7V2z' fill='%23000'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: top 2px left 3px;
+}
+
+.title-bar-controls button[aria-label="Close"] {
+    margin-left: 2px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='8' height='7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0h2v1h1v1h2V1h1V0h2v1H7v1H6v1H5v1h1v1h1v1h1v1H6V6H5V5H3v1H2v1H0V6h1V5h1V4h1V3H2V2H1V1H0V0z' fill='%23000'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: top 3px left 4px;
+}
+
+.ventana-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ventana-pedacito {
+    padding: 1.5em;
+    display: block;
+}
+
+.ventana-obraautor {
+    padding: 0 1.5em;
+    display: block;
+    margin: 0;
+}
+
+.btn-ventana {
+    font-size: 12px;
+}
+
+.ventana-contenedorbtn {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    background: #e3cfca;
+    line-height: 1.5;
+}
+
+.form-title {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.form-text {
+    width: 35%;
+    margin: 20px 20px;
+}
+
+#form-autorx {
+    margin-top: 10px;
+}
+
+#form-pedac {
+    margin: 30px 0 10px 0px;
+    height: 150px;
+    width: 100%;
+}
+
+.form-description {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.form-labels {
+    background-color: #dd3056;
+    color: white;
+    opacity: 0.8;
+}
+
+.form-inputs {
+    width: 35%;
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    width: 100%;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 50px 0px;
+}
+
+.btn-form {
+    font-size: 12px;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
+        inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+.errorMensaje {
+    display: inline-block;
+    background-color: rgba(255, 0, 0, 0.384);
+    padding: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+    .inicio-titulo {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .p-texto {
+        font-size: 1em;
+    }
+
+    .inicio-contenedor-btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .btn-mandar-inicio {
+        margin: 0;
+        margin-top: 1.5em;
+    }
+
+    .loader {
+        margin-left: 100px;
+        padding-left: 140px;
+        overflow: hidden;
+    }
+
+    .ventana {
+        max-height: 85%;
+        width: 90%;
+    }
+
+    img {
+        margin-left: 60px;
+    }
+
+    .form-text {
+        width: 80%;
+    }
+
+    .form-inputs {
+        width: 80%;
+    }
+}

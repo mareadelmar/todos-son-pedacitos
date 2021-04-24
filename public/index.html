@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Todos son pedacitos" />
+        <meta
+            name="keywords"
+            content="Literatura, Fragmentos, Quotes, Citas, Libros"
+        />
+        <meta name="author" content="Mar Ortega" />
+        <meta name="copyright" content="Mar Ortega" />
+        <meta name="robots" content="index follow" />
+
+        <!-- FACEBOOK -->
+        <meta property="og:title" content="Todos son pedacitos" />
+        <meta property="og:description" content="Citas de libros" />
+        <meta property="og:type" content="Citas de libros" />
+        <!-- <meta
+            property="og:image"
+            content="https://todos-son-pedacitos.web.app/images/"
+        /> -->
+        <meta
+            property="og:url"
+            content="https://todos-son-pedacitos.web.app/"
+        />
+
+        <!-- TWITTER -->
+        <meta property="twitter:title" content="Todos son pedacitos" />
+        <meta property="twitter:description" content="Citas de libros" />
+        <meta property="twitter:type" content="Citas de libros" />
+        <!-- <meta
+            property="twitter:image"
+            content=""
+        /> -->
+        <meta
+            property="twitter:url"
+            content="https://todos-son-pedacitos.web.app/"
+        />
+
+        <title>Todos son pedacitos</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <section class="contenedor-principal">
+            <div class="contenedor-content">
+                <h1 class="inicio-titulo">todos son pedacitos</h1>
+                <p class="p-texto">citas cortas y arbitrarias</p>
+                <div class="inicio-contenedor-btns">
+                    <button class="btn btn-principal">
+                        Quiero un pedacito
+                    </button>
+                    <a href="#form" class="btn btn-mandar-inicio">
+                        Mandar un pedacito
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor-loader">
+            <div class="loader">
+                <iframe src="images/loader.gif"></iframe>
+            </div>
+        </section>
+
+        <section class="contenedor-pedacitos">
+            <div class="contenedor-ventana">
+                <div class="ventana">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Un pedacito</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="ventana-content">
+                        <p class="ventana-pedacito"></p>
+                        <p class="ventana-obraautor"></p>
+                        <div class="ventana-contenedorbtn">
+                            <button class="btn btn-ventana">
+                                ✨ Otro pedacito ✨
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <form class="form-content" id="form">
+                <h2 class="form-title">Dejar un pedacito</h2>
+                <div class="form-text">
+                    <p class="form-description">
+                        Acá podés dejar un pedacito y sumarlo a esta colección.
+                    </p>
+                    <div class="form-description">
+                        <p>
+                            Para que mantengan su forma, te pido por favor que
+                            sigas esta caprichosa regla de registro:
+                        </p>
+                        <ol>
+                            <li>
+                                la obra, con la primera letra mayúcula y las
+                                demás minúsculas
+                            </li>
+                            <li>
+                                el apellido del autorx todo en mayúsculas y el
+                                nombre todo en minúsculas, separados por una
+                                coma
+                            </li>
+                        </ol>
+                    </div>
+                    <p class="form-description">
+                        Los pedacitos tienen una extensión máxima de 485
+                        caracteres &#40;al menos por ahora&#41;.
+                    </p>
+                    <p class="form-description">
+                        Gracias por respetar los pedacitos. Que sean miles.
+                    </p>
+                </div>
+                <div class="form-inputs">
+                    <div>
+                        <input
+                            class="inputs"
+                            id="form-obra"
+                            type="text"
+                            placeholder="Nombre de la obra"
+                            maxlength="80"
+                        />
+                    </div>
+                    <div>
+                        <input
+                            class="inputs"
+                            id="form-autorx"
+                            type="text"
+                            placeholder="APELLIDO, nombre"
+                            maxlength="80"
+                        />
+                    </div>
+                    <div>
+                        <textarea
+                            value=""
+                            class="inputs"
+                            placeholder="Pedacito..."
+                            id="form-pedac"
+                            maxlength="485"
+                        ></textarea>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <input
+                        type="submit"
+                        class="btn btn-form"
+                        value=" Mandar pedacito "
+                    />
+                </div>
+            </form>
+        </section>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+        <script src="fconfig.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
