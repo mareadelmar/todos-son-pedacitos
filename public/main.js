@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((res) => res.json())
         .then((res) => {
             pedacitos = res;
+            console.log(pedacitos);
         });
 });
 
@@ -37,9 +38,13 @@ const loader = () => {
 
 function sortearPedacito() {
     for (let i = 0; i < 1; i++) {
-        pedacitos[i] = pedacitos[Math.round(Math.random() * 82)];
+        const cantidadPedacitos = pedacitos.length - 1;
+        pedacitos[i] = pedacitos[Math.round(Math.random() * cantidadPedacitos)];
 
-        ventanaPedacito.innerHTML = `"${pedacitos[i].pedacito}"`;
+        ventanaPedacito.innerHTML = `"${pedacitos[i].pedacito.replace(
+            /\n/g,
+            "<br />"
+        )}"`;
         ventanaObraautor.innerHTML = `<strong>${pedacitos[i].obraautor}</strong>`;
     }
 }
