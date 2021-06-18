@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((res) => res.json())
         .then((res) => {
             pedacitos = res;
-            console.log(pedacitos);
+            //console.log(pedacitos);
         });
 });
 
@@ -51,7 +51,6 @@ function sortearPedacito() {
 
 function mandarPedacito(e) {
     e.preventDefault();
-    console.log("mandar pedacito");
     const formPedacito = document.querySelector("#form-pedac").value;
     const formAutorx = document.querySelector("#form-autorx").value;
     const formObra = document.querySelector("#form-obra").value;
@@ -73,6 +72,7 @@ function mandarPedacito(e) {
         id: Date.now(),
         pedacito: formPedacito,
         obraautor: `${formObra} – ${formAutorx}`,
+        fecha: new Date().toISOString(),
     };
     console.log(aporte);
     guardarFirestore(aporte);
@@ -85,9 +85,8 @@ function guardarFirestore(aporte) {
             .collection("pedacitos-aportes")
             .add(aporte);
         mostrarMensaje("✨ Aporte recibido. ¡Gracias! ✨");
-        console.log(data, "enviado");
     } catch (e) {
-        console.log(e);
+        console.error(e);
     }
     form.reset();
 }

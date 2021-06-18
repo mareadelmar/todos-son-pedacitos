@@ -69,17 +69,20 @@ body {
 }
 
 .contenedor-loader {
-    height: 98vh;
-    width: 65%;
+    height: 100vh;
+    width: 100%;
+}
+
+.loader img {
+    width: 50px;
 }
 
 .loader {
-    height: 98vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 37%;
 }
 
 iframe {
@@ -102,7 +105,7 @@ iframe {
 
 .ventana {
     max-height: 90%;
-    max-width: 50%;
+    max-width: 40%;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
         inset -2px -2px grey, inset 2px 2px #fff;
     background: silver;
@@ -185,7 +188,7 @@ button {
 }
 
 .btn-ventana {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .ventana-contenedorbtn {
@@ -293,19 +296,9 @@ button {
         margin-top: 1.5em;
     }
 
-    .loader {
-        margin-left: 100px;
-        padding-left: 140px;
-        overflow: hidden;
-    }
-
     .ventana {
-        max-height: 90%;
+        max-height: 94%;
         max-width: 90%;
-    }
-
-    img {
-        margin-left: 60px;
     }
 
     .form-text {
