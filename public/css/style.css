@@ -11,6 +11,10 @@
     color: #333;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100vh;
     width: 100%;
@@ -58,7 +62,7 @@ body {
 }
 
 .btn:hover {
-    color: #333;
+    color: #f2b9c5;
 }
 
 .btn-mandar-inicio {
@@ -218,8 +222,8 @@ button {
 }
 
 .form-text {
-    width: 35%;
-    margin: 20px 20px;
+    max-width: 468px;
+    margin: 20px auto;
 }
 
 #form-autorx {
@@ -232,20 +236,22 @@ button {
     width: 100%;
 }
 
-.form-description {
+/* .form-description {
     margin-top: 20px;
     display: inline-block;
-}
+} */
 
-.form-labels {
-    background-color: #dd3056;
-    color: white;
-    opacity: 0.8;
+.form-p {
+    *border: 1px dotted #333;
+    width: 360px;
+    text-align: center;
+    padding: 3px;
+    margin-bottom: 20px;
 }
 
 .form-inputs {
-    width: 35%;
-    margin: 20px 20px;
+    width: 400px;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
 }
@@ -265,6 +271,61 @@ button {
     font-size: 12px;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
         inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+ul.form-list {
+    padding-left: 0;
+}
+
+ul.form-list li,
+ul.form-list ul {
+    margin-top: 3px;
+}
+
+ul.form-list li {
+    list-style-type: none;
+}
+
+ul.form-list ul {
+    margin-left: 21px;
+    padding-left: 16px;
+    border-left: 1px dotted #333;
+}
+
+ul.form-list ul > li {
+    position: relative;
+}
+
+ul.form-rules li::before {
+    border-bottom: 1px dotted #333;
+    content: "";
+    display: block;
+    left: -24px;
+    position: absolute;
+    top: 12px;
+    width: 12px;
+}
+
+ul.form-list details > summary::before {
+    display: block;
+    float: left;
+    content: "+";
+    border: 1px solid grey;
+    width: 10px;
+    height: 9px;
+    line-height: 8px;
+    margin-right: 5px;
+    *background-color: #fff;
+}
+
+ul.form-list details[open] summary {
+    margin-bottom: 0;
+    *margin-right: 5px;
+    *padding-left: 1px;
+}
+
+li {
+    margin: 0.75em 0 0.75em 0.5em;
 }
 
 .errorMensaje {
@@ -302,10 +363,10 @@ button {
     }
 
     .form-text {
-        width: 80%;
+        width: 85%;
     }
 
     .form-inputs {
-        width: 80%;
+        width: 85%;
     }
 }
