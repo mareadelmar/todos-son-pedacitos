@@ -13,12 +13,13 @@ btnPrincipal.addEventListener("click", quieroPedacito);
 btnOtroPedacito.addEventListener("click", sortearPedacito);
 form.addEventListener("submit", mandarPedacito);
 
+const API_URL = "https://api-pedacitos.herokuapp.com/api/pedacitos";
+
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("pedacitos.json")
+    fetch(API_URL)
         .then((res) => res.json())
         .then((res) => {
             pedacitos = res;
-            //console.log(pedacitos);
         });
 });
 
@@ -41,13 +42,13 @@ function sortearPedacito() {
         const cantidadPedacitos = pedacitos.length - 1;
         pedacitos[i] = pedacitos[Math.round(Math.random() * cantidadPedacitos)];
 
-        ventanaPedacito.innerHTML = `"${pedacitos[i].pedacito.replace(
+        ventanaPedacito.innerHTML = `"${pedacitos[i].content.replace(
             /\n/g,
             "<br />"
         )}"`;
-        ventanaObraautor.innerHTML = `<strong>${pedacitos[i].obraautor}</strong>`;
+        ventanaObraautor.innerHTML = `<strong>${pedacitos[i].title} — ${pedacitos[i].author}</strong>`;
     }
-}
+};
 
 function mandarPedacito(e) {
     e.preventDefault();
