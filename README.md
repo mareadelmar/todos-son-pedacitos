@@ -1,6 +1,9 @@
 # todos son pedacitos
 
-Colección de citas literarias arbitrarias.
+Colección colaborativa de fragmentos arbitrarios de libros.\
+Con JavaScript y Firebase.\
+Deployada en: [https://todos-son-pedacitos.web.app/](https://todos-son-pedacitos.web.app/)
+
 
 ![](https://raw.githubusercontent.com/mareadelmar/todos-son-pedacitos/master/public/images/Todos-son-pedacitos.png)
 
