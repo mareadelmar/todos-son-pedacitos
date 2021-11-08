@@ -51,22 +51,27 @@
     </head>
     <body>
         <section class="contenedor-principal">
-            <div class="contenedor-content">
-                <h1 class="inicio-titulo">todos son pedacitos</h1>
-                <p class="p-texto">citas cortas y arbitrarias</p>
-                <div class="inicio-contenedor-btns">
-                    <button class="btn btn-principal">
-                        Quiero un pedacito
-                    </button>
-                    <a href="#form" class="btn btn-mandar-inicio">
-                        Mandar un pedacito
-                    </a>
+            <div class="contenedor-inicio flex justify-center align-center flex-column">
+                <div class="border">
+                    <div class="inicio-box flex justify-center align-center flex-column">
+                        <h1 class="inicio-titulo">todos son pedacitos</h1>
+                        <p class="p-texto">citas cortas y arbitrarias</p>
+                        <div class="inicio-contenedor-btns">
+                            <button class="btn btn-principal">
+                                Quiero un pedacito
+                            </button>
+                            <a href="#form" class="btn btn-mandar-inicio">
+                                Mandar un pedacito
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </section>
 
         <section class="contenedor-loader">
-            <div class="loader">
+            <div class="loader flex justify-center align-center">
                 <img
                     src="https://media.giphy.com/media/l4FGIO2vCfJkakBtC/source.gif"
                 ></img>
@@ -74,20 +79,20 @@
         </section>
 
         <section class="contenedor-pedacitos">
-            <div class="contenedor-ventana">
+            <div class="contenedor-ventana flex justify-center align-center">
                 <div class="ventana">
-                    <div class="title-bar">
+                    <div class="title-bar flex align-center">
                         <div class="title-bar-text">Un pedacito</div>
-                        <div class="title-bar-controls">
+                        <div class="flex">
                             <button aria-label="Minimize"></button>
                             <button aria-label="Maximize"></button>
                             <button aria-label="Close"></button>
                         </div>
                     </div>
-                    <div class="ventana-content">
+                    <div class="flex justify-center flex-column">
                         <p class="ventana-pedacito"></p>
                         <p class="ventana-obraautor"></p>
-                        <div class="ventana-contenedorbtn">
+                        <div class="ventana-contenedorbtn flex justify-center align-center flex-column">
                             <button class="btn btn-ventana">
                                 ✨ Otro pedacito ✨
                             </button>
@@ -97,36 +102,23 @@
             </div>
         </section>
         <section class="">
-            <form class="form-content" id="form">
+            <form class="form-content flex justify-center align-center" id="form">
                 <h2 class="form-title">Dejar un pedacito</h2>
                 <div class="form-text">
                     <ul class="form-list">
                         <li>
                             Acá podés dejar un pedacito y sumarlo a esta colección.
-                        </li>
-                        <li>
-                            Para que mantengan su forma, te pido por favor que sigas
-                            esta caprichosa regla de registro.
+                            Solo necesitás saber el nombre de la obra y quién la escribió.
                         </li>
                         <li>
                             <details open>
-                                <summary><i>las formas:</i></summary>
+                                <summary><i>sobre las formas:</i></summary>
                                 <ul class="form-rules">
-                                    <li>
-                                        la obra, con la primera letra mayúscula y las
-                                        demás minúsculas
-                                    </li>
-                                    <li>
-                                        el apellido del autorx todo en mayúsculas y
-                                        el nombre todo en minúsculas, separados por
-                                        una coma
-                                    </li>
-                                    <li>el pedacito, sin comillas.</li>
+                                    <li>el pedacito va sin comillas.</li>
                                     <li>
                                         los pedacitos tienen una extensión máxima de
                                         485 caracteres &#40;al menos por ahora&#41;.
                                     </li>
-    
                                     <li>
                                         <details open>
                                             <summary>poemas:</summary>
@@ -147,7 +139,7 @@
                 <p class="form-p">
                     Gracias por respetar los pedacitos. ¡Que sean miles!
                 </p>
-                <div class="form-inputs">
+                <div class="form-inputs flex flex-column">
                     <div>
                         <input
                             class="inputs"
@@ -176,7 +168,7 @@
                         ></textarea>
                     </div>
                 </div>
-                <div class="btn-container">
+                <div class="btn-container flex justify-center align-center">
                     <input
                         type="submit"
                         class="btn btn-form"
@@ -185,7 +177,6 @@
                 </div>
             </form>
         </section>
-
         <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
         <script src="fconfig.js"></script>
