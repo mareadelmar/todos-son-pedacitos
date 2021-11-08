@@ -35,17 +35,17 @@ body {
 .inicio-box {
 	max-width: 800px;
 	height: 400px;
-	background-color: antiquewhite;
+	background-color: #ece0d1;
 	border: 2px solid black;
 }
 
 .border {
-	border: 10px solid antiquewhite;
+	border: 10px solid #ece0d1;
 }
 
 .border::after {
 	z-index: 2;
-	border: 10px solid antiquewhite;
+	border: 10px solid #ece0d1;
 	height: 500px;
 }
 
