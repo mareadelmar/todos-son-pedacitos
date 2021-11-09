@@ -52,13 +52,18 @@ body {
 .inicio-titulo {
 	font-family: "Roboto Mono", monospace;
 	font-size: 3em;
-	padding: 0.75em;
+	padding: 1em 1em 0.5em 1em;
+}
+
+.divider {
+	width: 35%;
+	border: 0.25px solid #333;
 }
 
 .p-texto {
 	font-family: "IM Fell DW Pica", serif;
-	font-size: 1.5em;
-	margin-bottom: 2em;
+	font-size: 1.75em;
+	margin: 1.25em 0;
 	font-style: italic;
 }
 
@@ -342,11 +347,16 @@ li {
 		text-align: center;
 	}
 
+	.p-texto {
+		font-size: 1.5em;
+	}
+
 	.inicio-contenedor-btns {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		margin-bottom: 1.5em;
 	}
 
 	.btn-mandar-inicio {
