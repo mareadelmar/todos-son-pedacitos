@@ -342,16 +342,11 @@ li {
 		text-align: center;
 	}
 
-	.p-texto {
-		font-size: 1em;
-	}
-
 	.inicio-contenedor-btns {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		margin: 1em;
 	}
 
 	.btn-mandar-inicio {
